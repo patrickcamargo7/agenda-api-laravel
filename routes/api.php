@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('contacts', 'ContactsController@index');
+Route::resource('contacts', 'ContactsController');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
